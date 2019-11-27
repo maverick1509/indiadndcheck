@@ -13,7 +13,7 @@ exports.isDND = function(mobile, next) {
             //console.log(body);
             var $ = cheerio.load(body);
             var row = $("form > table > tr:nth-child(3) > td > b > font")[0];
-            if(row.children[0].data==="The number is registered in NCPR"){
+            if(row.children[0].data==="Registered"){
                 next(null, true);
             } else {
                 next(null, false);
