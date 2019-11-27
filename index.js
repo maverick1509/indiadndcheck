@@ -12,7 +12,7 @@ exports.isDND = function(mobile, next) {
         if(!err && httpResponse.statusCode===200){
             //console.log(body);
             var $ = cheerio.load(body);
-            var row = $("form > div > table > tr:nth-child(6) > td > b > font")[0];
+            var row = $("form > table > tr:nth-child(3) > td > b > font")[0];
             if(row.children[0].data==="The number is registered in NCPR"){
                 next(null, true);
             } else {
